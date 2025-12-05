@@ -15,6 +15,7 @@ class Program
         }
 
         int location = 50;
+        int count = 0;
 
         //we found trhe file yay
         //read in each line and we will parse it out then return, we are going to keep track of the numbers outside the function :/ bad system design
@@ -24,8 +25,13 @@ class Program
             location = parseInput(line, location);
             Console.WriteLine($"This click was: {location}");
 
+            if (location == 0)
+            {
+                count++;
+            }
 
         }
+        Console.WriteLine(count);
     }
 
 
